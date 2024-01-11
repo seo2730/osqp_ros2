@@ -29,15 +29,6 @@ find_package(Ceres REQUIRED)
 ## OSQP-Eigen
 find_package(OsqpEigen REQUIRED)
 
-## OSQP-CPP
-add_subdirectory(abseil-cpp)
-find_library(
-  OsqpCpp 
-  NAMES libosqp-cpp.a
-  HINTS ~/github/osqp-cpp/build
-  REQUIRED
-  )
-
 include_directories(include
 ~/github/osqp-cpp/include/
 )
@@ -49,7 +40,7 @@ set(src_files
 
 add_executable(op_node ${src_files})
 ament_target_dependencies(op_node rclcpp std_msgs)
-target_link_libraries(op_node Eigen3::Eigen OsqpEigen::OsqpEigen absl::strings ${OsqpCpp})
+target_link_libraries(op_node Eigen3::Eigen OsqpEigen::OsqpEigen)
 
 # Install
 install(TARGETS
