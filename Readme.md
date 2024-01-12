@@ -23,6 +23,8 @@
         export PATH=$HOME/cmake-install/bin:$PATH
         export CMAKE_PREFIX_PATH=$HOME/cmake-install:$CMAKE_PREFIX_PATH
 
+- [설치 방법](https://developers.google.com/optimization/install/cpp/source_linux)
+
 - error log
     1. 용량 부족
 
