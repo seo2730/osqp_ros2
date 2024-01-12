@@ -4,11 +4,11 @@
 #include "rclcpp/rclcpp.hpp"
 #include "std_msgs/msg/string.hpp"
 
-#include "OsqpEigen/OsqpEigen.h" //osqp : 6.3.0 version
+// #include "OsqpEigen/OsqpEigen.h" //osqp : 6.3.0 version
 
-#include <Eigen/Dense>
+// #include <Eigen/Dense>
 
-#include <iostream>
+// #include <iostream>
 
 
 class optimization{

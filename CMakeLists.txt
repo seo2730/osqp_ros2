@@ -29,8 +29,10 @@ find_package(Ceres REQUIRED)
 ## OSQP-Eigen
 find_package(OsqpEigen REQUIRED)
 
+## OR-Tool
+find_package(ortools CONFIG REQUIRED)
+
 include_directories(include
-~/github/osqp-cpp/include/
 )
 
 set(src_files
@@ -40,7 +42,7 @@ set(src_files
 
 add_executable(op_node ${src_files})
 ament_target_dependencies(op_node rclcpp std_msgs)
-target_link_libraries(op_node Eigen3::Eigen OsqpEigen::OsqpEigen)
+target_link_libraries(op_node Eigen3::Eigen OsqpEigen::OsqpEigen ortools::ortools)
 
 # Install
 install(TARGETS
